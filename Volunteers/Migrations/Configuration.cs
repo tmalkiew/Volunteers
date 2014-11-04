@@ -9,7 +9,7 @@ namespace Volunteers.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Volunteers.Models.ApplicationDbContext";
         }
 

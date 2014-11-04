@@ -154,7 +154,13 @@ namespace Volunteers.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, fName = model.fName, lName = model.lName };
+                var user = new ApplicationUser { 
+                    UserName = model.Email,
+                    Email = model.Email,
+                    fName = model.fName,
+                    lName = model.lName,
+                    birthDate = model.birthDate
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

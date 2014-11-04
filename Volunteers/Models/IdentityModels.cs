@@ -19,11 +19,14 @@ namespace Volunteers.Models
             return userIdentity;
         }
 
-        [Display(Name=("First Name"))]
+        [Required, Display(Name=("First Name"))]
         public string fName { get; set; }
 
-        [Display(Name=("Last Name"))]
+        [Required, Display(Name=("Last Name"))]
         public string lName { get; set; }
+
+        [Required, Display(Name=("Date of Birth")),DataType(DataType.Date)]
+        public DateTime birthDate { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Volunteers.Models
@@ -85,6 +86,9 @@ namespace Volunteers.Models
 
         [Display(Name=("Last Name"))]
         public string lName { get; set; }
+
+        [Required, Display(Name=("Date of Birth")), DataType(DataType.Date)]
+        public DateTime birthDate { get; set; }
     }
 
     public class ResetPasswordViewModel
